@@ -1,0 +1,11 @@
+.icon {
+	display: flex;
+
+	width: var(--icon);
+	height: var(--icon);
+
+
+	vertical-align: middle;
+
+	fill: currentColor;
+}

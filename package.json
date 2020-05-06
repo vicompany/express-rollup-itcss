@@ -1,0 +1,75 @@
+{
+  "name": "express-rollup-frontend-recipe",
+  "version": "0.1.0",
+  "description": "Express Rollup Front-End Recipe",
+  "author": "VI Company",
+  "private": true,
+  "engines": {
+    "node": ">=12.13"
+  },
+  "scripts": {
+    "auth": "npx vsts-npm-auth -c .npmrc -t .npmrc",
+    "prebuild": "run-p clean lint copy",
+    "build": "cross-env NODE_ENV=production run-p build:*",
+    "build:scripts": "rollup --config",
+    "build:styles": "postcss source/css/*.css --verbose --dir static/css",
+    "build:sprite": "shx mkdir -p static/icons && svgo --config=svgo.config.json -f source/icons && svgstore source/icons/*.svg -p icon- -o static/icons/sprite.svg",
+    "clean": "shx rm -rf static/**/*",
+    "dev": "cross-env run-p copy watch serve",
+    "serve": "nodemon app --verbose --inspect=9230",
+    "start": "cross-env NODE_ENV=production npm run server",
+    "server": "node app",
+    "lint": "run-p lint:*",
+    "lint:scripts": "eslint source/scripts/**/*.mjs --fix",
+    "lint:styles": "stylelint source/css/**/*.css --fix",
+    "copy": "shx mkdir -p static && shx cp -r source/images static",
+    "watch": "run-p watch:*",
+    "watch:scripts": "npm run build:scripts -- --watch",
+    "watch:styles": "npm run build:styles -- --watch",
+    "postversion": "git push --follow-tags"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm run build"
+    }
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "cross-env": "7.0.2",
+    "dotenv": "8.2.0",
+    "envalid": "6.0.1",
+    "express": "4.17.1",
+    "express-handlebars": "4.0.3",
+    "express-session": "1.17.1",
+    "got": "10.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.9.0",
+    "@babel/preset-env": "7.9.5",
+    "@babel/preset-modules": "0.1.3",
+    "@rollup/plugin-commonjs": "11.1.0",
+    "@rollup/plugin-node-resolve": "7.1.3",
+    "babel-plugin-transform-async-to-promises": "0.8.15",
+    "core-js": "3.6.5",
+    "dynamic-import-polyfill": "0.1.1",
+    "eslint": "6.8.0",
+    "eslint-config-vi": "10.8.0",
+    "husky": "4.2.5",
+    "nodemon": "2.0.3",
+    "npm-run-all": "4.1.5",
+    "postcss-cli": "7.1.0",
+    "postcss-csso": "4.0.0",
+    "postcss-custom-properties": "9.1.1",
+    "postcss-import": "12.0.1",
+    "postcss-preset-env": "6.7.0",
+    "rollup": "2.6.1",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-terser": "5.3.0",
+    "shx": "0.3.2",
+    "stylelint": "13.3.2",
+    "stylelint-config-vi": "2.0.0",
+    "svgo": "1.3.2",
+    "svgstore-cli": "1.3.1",
+    "whatwg-fetch": "3.0.0"
+  }
+}

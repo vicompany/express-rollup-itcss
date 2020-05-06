@@ -1,0 +1,11 @@
+img {
+	max-width: 100%;
+	height: auto;
+
+	vertical-align: bottom; /* bug fix: http://stackoverflow.com/questions/10844205/html-5-strange-img-always-adds-3px-margin-at-bottom */
+}
+
+svg {
+	width: 100%;
+	height: auto;
+}

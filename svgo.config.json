@@ -1,0 +1,6 @@
+{
+  "plugins": [
+    { "removeStyleElement": true },
+    { "removeAttrs": { "attrs": "(class|fill|stroke|style)" } }
+  ]
+}
