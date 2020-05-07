@@ -1,0 +1,21 @@
+module.exports = ({ featurePolicy }) => featurePolicy({
+	features: {
+		geolocation: ['\'none\''],
+		midi: ['\'none\''],
+		// notifications: ['\'none\''],
+		// push: ['\'none\''],
+		syncXhr: ['\'none\''],
+		microphone: ['\'none\''],
+		camera: ['\'none\''],
+		magnetometer: ['\'none\''],
+		gyroscope: ['\'none\''],
+		speaker: ['\'none\''],
+		// vibrate: ['\'none\''],
+		fullscreen: ['\'none\''],
+		payment: ['\'none\''],
+		accelerometer: ['\'none\''],
+		usb: ['\'none\''],
+		vr: ['\'none\''],
+		autoplay: ['\'none\''],
+	},
+});

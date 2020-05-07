@@ -1,7 +1,7 @@
 {
   "name": "express-rollup-frontend-recipe",
   "version": "0.1.0",
-  "description": "Express Rollup Front-End Recipe",
+  "description": "Express Rollup ITCSS Front-End Recipe",
   "author": "VI Company",
   "private": true,
   "engines": {
@@ -16,9 +16,9 @@
     "build:sprite": "shx mkdir -p static/icons && svgo --config=svgo.config.json -f source/icons && svgstore source/icons/*.svg -p icon- -o static/icons/sprite.svg",
     "clean": "shx rm -rf static/**/*",
     "dev": "cross-env run-p copy watch serve",
-    "serve": "nodemon app --verbose --inspect=9230",
+    "serve": "nodemon server --inspect=9230",
     "start": "cross-env NODE_ENV=production npm run server",
-    "server": "node app",
+    "server": "node server",
     "lint": "run-p lint:*",
     "lint:scripts": "eslint source/scripts/**/*.mjs --fix",
     "lint:styles": "stylelint source/css/**/*.css --fix",
@@ -34,14 +34,24 @@
     }
   },
   "dependencies": {
+    "@cloudnative/health-connect": "2.1.0",
+    "@vi/logger": "1.0.7",
+    "@vi/report-uri": "1.0.1",
     "body-parser": "1.19.0",
+    "compression": "1.7.4",
     "cross-env": "7.0.2",
+    "csurf": "1.11.0",
     "dotenv": "8.2.0",
     "envalid": "6.0.1",
     "express": "4.17.1",
     "express-handlebars": "4.0.3",
+    "express-pino-logger": "5.0.0",
     "express-session": "1.17.1",
-    "got": "10.7.0"
+    "got": "10.7.0",
+    "helmet": "3.22.0",
+    "memorystore": "1.6.2",
+    "prom-client": "12.0.0",
+    "uuidv4": "6.0.8"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
