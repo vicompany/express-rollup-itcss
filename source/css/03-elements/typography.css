@@ -1,39 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-	margin-top: 0;
-
-	font-weight: 600;
-}
-
-h1 {
 	margin: 0 0 1rem;
-
-	font-size: var(--font-size-6);
-	line-height: var(--line-height-6);
-}
-
-h2 {
-	font-size: var(--font-size-5);
-	line-height: var(--line-height-5);
-}
-
-h3 {
-	font-size: var(--font-size-4);
-	line-height: var(--line-height-4);
-}
-
-h4 {
-	font-size: var(--font-size-3);
-	line-height: var(--line-height-3);
-}
-
-h5 {
-	font-size: var(--font-size-2);
-	line-height: var(--line-height-2);
-}
-
-h6 {
-	font-size: var(--font-size-1);
-	line-height: var(--line-height-1);
 }
 
 p {
@@ -41,9 +7,5 @@ p {
 }
 
 a {
-	color: var(--color-tint-primary);
-}
-
-a:hover {
-	text-decoration: none;
+	color: var(--color-primary);
 }

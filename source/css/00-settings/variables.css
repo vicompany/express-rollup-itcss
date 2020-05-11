@@ -1,68 +1,11 @@
 :root {
 	/* color */
-	--color-tint-primary: #2ea5dd;
-	--color-tint-secondary: #fb5f62;
-	--color-tint-error: #f81a1f;
-	--color-tint-positive: #5bb947;
-	--color-tint-warning: #f8ad1a;
-
-	--color-on-tint-primary: #20293d;
-	--color-on-tint-secondary: #20293d;
-	--color-on-tint-error: #fff;
-	--color-on-tint-positive: #20293d;
-	--color-on-tint-warning: #20293d;
-
-	--color-base: 32, 41, 61;
-	--color-base-0: #fff;
-	--color-base-50: rgba(var(--color-base), 0.05);
-	--color-base-100: rgba(var(--color-base), 0.1);
-	--color-base-200: rgba(var(--color-base), 0.2);
-	--color-base-500: rgba(var(--color-base), 0.5);
-	--color-base-800: rgba(var(--color-base), 0.8);
-	--color-base-1000: rgb(var(--color-base));
-
-	/* effect */
-	--shadow-s: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-	--shadow-m: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-	--shadow-l: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	--color-primary: #fb5f62;
+	--color-secondary: #232a3d;
+	--color-white: #fff;
+	--color-black: #000;
+	--color-gray: #aaa;
 
 	/* typography */
-	--font-family: wigrum, sans-serif;
-
-	--font-size--2: 0.75rem;
-	--line-height--2: 1rem;
-	--font-size--1: 0.875rem;
-	--line-height--1: 1.25rem;
-	--font-size-0: 1rem;
-	--line-height-0: 1.5rem;
-	--font-size-1: 1.25rem;
-	--line-height-1: 2rem;
-	--font-size-2: 1.5rem;
-	--line-height-2: 2rem;
-	--font-size-3: 2.125rem;
-	--line-height-3: 2.5rem;
-	--font-size-4: 3rem;
-	--line-height-4: 3.125rem;
-	--font-size-5: 4rem;
-	--line-height-5: 4rem;
-	--font-size-6: 6rem;
-	--line-height-6: 6rem;
-
-	/* layout */
-	/* stylelint-disable-next-line number-max-precision */
-	--border-s: 0.0625rem;
-	--border-m: calc(var(--border-s) * 2);
-	--border-l: calc(var(--border-s) * 4);
-
-	--gutter: 2rem;
-
-	--icon: 1.5rem;
-
-	--length-xxs: 0.125rem;
-	--length-xs: 0.25rem;
-	--length-s: 0.375rem;
-	--length-m: 0.5rem;
-	--length-l: 0.75rem;
-	--length-xl: 0.875rem;
-	--length-xxl: 1rem;
+	--font-family: arial, helvetica, sans-serif;
 }

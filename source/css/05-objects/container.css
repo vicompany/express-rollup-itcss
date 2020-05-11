@@ -1,7 +1,4 @@
 .container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	height: 100%;
+	max-width: 80rem;
+	margin: 0 auto;
 }

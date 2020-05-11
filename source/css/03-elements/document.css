@@ -7,14 +7,10 @@ body {
 	margin: 0;
 	padding: 0;
 
-	color: var(--color-base-1000);
-	/* TODO: Import Wigrum font */
+	color: var(--color-white);
 	font-family: var(--font-family);
-	font-size: var(--font-size-0);
-	font-weight: 500;
-	line-height: var(--line-height-0);
 
-	background: var(--color-base-0);
+	background: var(--color-secondary);
 
 	scroll-behavior: smooth;
 }
