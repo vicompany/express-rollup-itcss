@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 
 const session = require('express-session');
 
+const config = require('./config');
+
 const helloWorld = require('./components/hello-world/hello-world.router');
 
 const app = express();
@@ -18,7 +20,7 @@ app.set('view engine', '.hbs');
 
 app.use(session({
 	saveUninitialized: false,
-	secret: '5dX0kCk9x2E',
+	secret: config.session.secret,
 	resave: false,
 }));
 app.use(bodyParser.json());

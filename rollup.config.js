@@ -2,7 +2,7 @@
 
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 
 const LEGACY_BUILD = 'legacy';
@@ -41,6 +41,7 @@ const moduleConfig = {
 	plugins: [
 		...basePlugins(),
 		babel({
+			babelHelpers: 'bundled',
 			exclude: 'node_modules/**',
 		}),
 	],
@@ -59,6 +60,7 @@ const noModuleConfig = {
 	plugins: [
 		...basePlugins(LEGACY_BUILD),
 		babel({
+			babelHelpers: 'bundled',
 			envName: LEGACY_BUILD,
 			exclude: 'node_modules/**',
 		}),

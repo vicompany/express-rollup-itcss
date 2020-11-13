@@ -11,7 +11,7 @@ module.exports = {
 		atImport(),
 		postcssPresetEnv({
 			// For an overview of all stages check: https://cssdb.org/
-			stage: 3,
+			stage: 2,
 			features: {
 				'nesting-rules': true,
 				'custom-media-queries': true,
