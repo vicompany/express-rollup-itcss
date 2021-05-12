@@ -43,7 +43,7 @@
     "express-handlebars": "5.2.0",
     "express-session": "1.17.1",
     "got": "11.8.0",
-    "postcss": "8.1.7"
+    "postcss": "8.2.10"
   },
   "devDependencies": {
     "@babel/core": "7.12.3",
