@@ -39,7 +39,7 @@
     "cross-env": "7.0.2",
     "dotenv": "8.2.0",
     "envalid": "6.0.2",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "express-handlebars": "5.2.0",
     "express-session": "1.17.1",
     "got": "11.8.0",
